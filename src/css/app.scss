@@ -1,1 +1,83 @@
 // app global css in SCSS form
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 17px;
+  background-color: #e5e5e5;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.q-tab__label {
+  text-transform: capitalize;
+}
+
+.splide__pagination li {
+  margin: 0 1rem !important;
+}
+
+.splide__pagination__page.is-active {
+  background: #5cff85 !important;
+  border-radius: 100px;
+  transform: scale(1.4);
+  width: 60px !important;
+  height: 6px;
+}
+.splide__pagination {
+  bottom: -2em !important;
+}
+.splide__pagination__page {
+  width: 16px !important;
+  height: 6px !important;
+
+  background: #ffffff;
+  border-radius: 5px !important;
+}
+img {
+  width: 100%;
+  object-fit: contain;
+}
+.container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.nav__links {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #2f4858;
+}
+.hero_btn:before {
+  box-shadow: none;
+}
+
+.tabs .q-tab--active .q-tab__label {
+  background: none;
+}
+
+.tabs .q-tab__label {
+  padding: 0.75rem 1rem;
+  background: rgba(47, 72, 88, 0.09);
+  border-radius: 100px;
+}
+.q-tab-panel {
+  padding: 0;
+}
+.tabs .scroll {
+  overflow: hidden;
+}
