@@ -11,7 +11,7 @@
     <FindProv />
     <Find />
     <Join />
-    <Testimonial />
+    <!-- <Testimonial /> -->
     <Get />
     <Trusted />
     <Footer />

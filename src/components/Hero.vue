@@ -14,8 +14,7 @@
       </div>
 
       <div class="hero_desc">
-        Get professional artisans to your <br />
-        doorstep at your
+        Get professional artisans to your doorstep at your
         <span class="text-primary">finger tips</span>
       </div>
 
@@ -24,7 +23,7 @@
         <span class="text-primary">N1500</span> .
       </div>
 
-      <div class="btns flex items-center">
+      <div class="btns flex justify-center items-center">
         <q-btn class="get_started"> Get Started </q-btn>
         <q-btn class="find"> Find Jobs </q-btn>
       </div>
@@ -111,5 +110,25 @@ export default {};
 .img {
   position: relative;
   z-index: 2;
+}
+
+@media (max-width: 800px) {
+  .hero_title {
+    font-style: normal;
+    font-size: 34.8475px;
+    line-height: 91px;
+
+    color: #1abc9c;
+    margin: 1rem;
+  }
+  .hero_desc {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  .hero_sub {
+    text-align: center;
+  }
 }
 </style>

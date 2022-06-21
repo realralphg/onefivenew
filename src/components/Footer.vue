@@ -1,7 +1,5 @@
 <template>
   <div class="bg-dark wrapper">
-    <img class="oo" src="/images/ooo.png" alt="" />
-    <img class="hee" src="/images/hee.png" alt="" />
     <div class="grid text-white container">
       <div class="box">
         <div class="footer_header">
@@ -13,9 +11,8 @@
       <div class="box">
         <h6 class="text-weight-bold text-primary">Services</h6>
         <ul>
-          <li>About company</li>
-          <li>Mentors</li>
-          <li>Testimonies</li>
+          <li>About Us</li>
+          <li>Services</li>
           <li>Contact us</li>
         </ul>
       </div>
@@ -263,6 +260,10 @@ P {
     display: block;
   }
 
+  .li {
+    margin-top: 0.65rem;
+  }
+
   .grid {
     grid-template-columns: 1fr;
   }
@@ -299,26 +300,22 @@ P {
     font-size: 1.5rem;
     color: #fff;
   }
-  .wrapper {
-    border-bottom-right-radius: 30%;
-  }
-}
-
-@media (max-width: 800px) {
-  .nnn {
-    width: 180px;
-    height: 200px;
-    position: absolute;
-    left: -25%;
-    top: -4%;
+  .box p {
+    margin-bottom: 1rem;
   }
 
-  .hee {
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+  .input .search {
+    height: 45px;
+    border-radius: 4px;
+    width: 70px;
+    font-size: 14px;
+    padding: 0 2.5rem;
+  }
+  ::placeholder {
+    font-size: 14px;
+  }
+  .input {
+    height: 45px;
   }
 }
 </style>

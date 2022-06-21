@@ -43,4 +43,11 @@ export default {};
 
   color: #2f4858;
 }
+
+@media (max-width: 768px) {
+  .join {
+    padding: 2rem 1rem;
+    margin: 2rem 0;
+  }
+}
 </style>

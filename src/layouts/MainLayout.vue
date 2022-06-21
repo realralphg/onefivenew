@@ -6,21 +6,9 @@
       <nav>
         <ul>
           <q-tabs active-color="primary">
-            <q-route-tab
-              class="text-dark nav__links"
-              to="/page2"
-              label="About Us"
-            />
-            <q-route-tab
-              class="text-dark nav__links"
-              to="/page3"
-              label="Services"
-            />
-            <q-route-tab
-              class="text-dark nav__links"
-              to="/page3"
-              label="Contact Us"
-            />
+            <q-route-tab class="text-dark nav__links" label="About Us" />
+            <q-route-tab class="text-dark nav__links" label="Services" />
+            <q-route-tab class="text-dark nav__links" label="Contact Us" />
           </q-tabs>
         </ul>
       </nav>
@@ -30,12 +18,10 @@
           <q-tabs>
             <q-route-tab
               class="text-primary q-mr-md login info"
-              to="/page1"
               label="Log in"
             />
             <q-route-tab
               class="text-white sign_up q-px-lg q-py-sm"
-              to="/page2"
               label="Sign Up"
             />
           </q-tabs>
@@ -58,13 +44,25 @@
         :breakpoint="1208"
       >
         <q-list>
-          <q-item-label header> Essential Links </q-item-label>
-
-          <EssentialLink
-            v-for="link in essentialLinks"
-            :key="link.title"
-            v-bind="link"
-          />
+          <q-tabs active-color="primary">
+            <div
+              style="width: 100%"
+              class="column q-py-lg items-center side_bar justify-center"
+            >
+              <q-route-tab
+                class="text-dark nav__links addbor"
+                label="About Us"
+              />
+              <q-route-tab
+                class="text-dark nav__links addbor"
+                label="Services"
+              />
+              <q-route-tab
+                class="text-dark nav__links addbor"
+                label="Contact Us"
+              />
+            </div>
+          </q-tabs>
         </q-list>
       </q-drawer>
     </div>
@@ -117,6 +115,14 @@ export default defineComponent({
   justify-content: space-between;
   align-items: center;
   height: 90px;
+}
+
+.addbor {
+  border: 1px solid #f4f4f4;
+  padding: 0.55rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .hide {

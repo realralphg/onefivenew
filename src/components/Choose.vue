@@ -8,19 +8,19 @@
         The smart way to search for a job near you.
       </div>
 
-      <div class="tabs q-pt-xl">
+      <div class="tabs q-py-xl">
         <q-tabs
           v-model="tab"
           dense
           autoplay
-          class="text-weight-bold"
+          class="text-weight-bold q-mb-lg"
           active-color="dark"
           active-bg-color="accent"
           indicator-color="accent"
           align="justify"
           narrow-indicator
-          mobile-arrows="false"
-          outside-arrows="false"
+          mobile-arrows="true"
+          outside-arrows="true"
         >
           <q-tab class="text-dark" name="All" label="All" />
           <q-tab class="text-dark" name="Plumbing" label="Plumbing" />
@@ -97,6 +97,13 @@ export default {
 
       bigBanner: [
         {
+          id: 3,
+          img: "/images/fam.jpeg",
+          name: "Farming Services",
+          title: "",
+          big: true,
+        },
+        {
           id: 1,
           img: "/images/first-serv.png",
           name: "Carpentary Services",
@@ -110,15 +117,15 @@ export default {
           title: "",
           big: true,
         },
+      ],
+      jobs: [
         {
           id: 3,
           img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740",
           name: "Cleaning Services",
           title: "",
-          big: true,
+          big: false,
         },
-      ],
-      jobs: [
         {
           id: 4,
           img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1796",
@@ -178,7 +185,7 @@ export default {
         {
           id: 12,
           img: "/images/thirteen.png",
-          name: "Cinematography Services",
+          name: "Cinematography",
           title: "",
           big: false,
         },
@@ -227,7 +234,8 @@ export default {
 
 .big_banner_jobs {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-template-columns: repeat(3, 1fr); */
   margin: 3rem 0;
   gap: 1rem;
 }
@@ -306,5 +314,16 @@ export default {
 
 .small {
   position: relative;
+}
+
+@media (max-width: 600px) {
+  .big_banner_jobs {
+    display: grid;
+    margin: 1rem 0;
+    gap: 1rem;
+  }
+  .head_text {
+    line-height: 35px;
+  }
 }
 </style>

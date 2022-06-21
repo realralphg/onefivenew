@@ -226,4 +226,25 @@ export default {
   width: 90%;
   margin-left: auto;
 }
+
+@media (max-width: 700px) {
+  .text_testi {
+    line-height: 34px;
+  }
+  .box {
+    padding: 2rem;
+  }
+
+  .wrapper::after {
+    font-size: 4rem;
+    z-index: 1;
+    right: 15%;
+  }
+
+  .hold {
+    position: relative;
+    z-index: 10;
+    width: 285px;
+  }
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper bg-dark">
     <div class="grid container">
-      <div class="hold">
+      <div class="hold no_padding">
         <h2 class="text-h3 q-mb-md find_head text-white text-weight-bold">
           Manage your projects <br />
           from your mobile
@@ -236,8 +236,17 @@ p {
     font-size: 1.5rem;
     color: #fff;
   }
-  .wrapper {
-    border-bottom-right-radius: 30%;
+
+  .find_head {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .img {
+    height: 220px;
+  }
+  .det_head {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
 }
 

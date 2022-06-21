@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="why q-py-xl">
       <div class="row items-center justify-between q-pt-xl container">
-        <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="col-md-6 col-sm-12 addMargin col-xs-12">
           <h5 class="why_head">
             Why <span class="text-primary">ONEFIVE</span>?
           </h5>
@@ -38,7 +38,9 @@
             </div>
           </div>
         </div>
-        <div class="col col-md-6 col-sm-12 q-mt-lg q-pl-xl col-xs-12">
+        <div
+          class="col col-md-6 no_padding col-sm-12 q-mt-lg q-pl-xl col-xs-12"
+        >
           <div class="img">
             <img class="bg" src="/images/why-img.png" />
             <div
@@ -290,21 +292,51 @@ p {
   border-radius: 50%;
 }
 
+@media (max-width: 800px) {
+  .trans_det {
+    width: 80%;
+  }
+  .addMargin {
+    margin-bottom: 5rem;
+  }
+  .holderr .hold:nth-child(1),
+  .holderr .hold:nth-child(2),
+  .holderr .hold:nth-child(3),
+  .holderr .hold:nth-child(4) {
+    padding: 0rem;
+    margin-bottom: 3rem;
+  }
+
+  .why_subtext {
+    font-size: 14px;
+  }
+  .img .bg {
+    width: 100%;
+  }
+
+  .holderr {
+    height: 609px;
+  }
+}
 @media (max-width: 400px) {
   .holderr .hold:nth-child(1)::after {
-    content: "1";
-    /* box-shadow: 0 0 0 4px #fd57bf; */
+    content: "\f09d";
     top: 9%;
   }
   .holderr .hold:nth-child(2)::after {
-    content: "2";
-    /* box-shadow: 0 0 0 4px #fd57bf; */
+    content: "\e06c";
     top: 9%;
   }
   .holderr .hold:nth-child(3)::after {
-    content: "3";
-    /* box-shadow: 0 0 0 4px #fd57bf; */
+    content: "\f118";
     top: 9%;
+  }
+  .holderr .hold:nth-child(1),
+  .holderr .hold:nth-child(2),
+  .holderr .hold:nth-child(3),
+  .holderr .hold:nth-child(4) {
+    padding: 0rem;
+    margin-bottom: 3rem;
   }
 }
 </style>

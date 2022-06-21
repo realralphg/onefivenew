@@ -5,9 +5,9 @@
         <div data-cid="home-4" class="vision">
           <div class="_3fZLMPLS _2Rtbw_d5">
             <section class="_1YibmBYc _11ZqUWmz _2_32njdU">
-              <h2 data-testid="feature-stepper-title" class="how__header">
+              <div data-testid="feature-stepper-title" class="how__header">
                 How it works
-              </h2>
+              </div>
               <div class="_2qGKqRqZ">
                 <div class="_1epx56Ug">
                   <div
@@ -41,9 +41,9 @@
                           </svg>
                         </div>
                         <div class="_1TA7PM5e">
-                          <h3 class="_2yVHU0Wx" data-testid="step-title">
+                          <div class="_2yVHU0Wx" data-testid="step-title">
                             Create an Account
-                          </h3>
+                          </div>
                           <div class="_12ydEHM0">
                             First you have to create a account <br />
                             here
@@ -69,9 +69,9 @@
                           </svg>
                         </div>
                         <div class="_1TA7PM5e">
-                          <h3 class="_2yVHU0Wx" data-testid="step-title">
+                          <div class="_2yVHU0Wx" data-testid="step-title">
                             Search for jobs
-                          </h3>
+                          </div>
                           <div class="_12ydEHM0">
                             Search the best freelance work <br />
                             here .Allow your clients to connect <br />
@@ -98,9 +98,9 @@
                           </svg>
                         </div>
                         <div class="_1TA7PM5e">
-                          <h3 class="_2yVHU0Wx" data-testid="step-title">
+                          <div class="_2yVHU0Wx" data-testid="step-title">
                             Save and apply
-                          </h3>
+                          </div>
                           <div class="_12ydEHM0">
                             Apply or save and start your work
                           </div>
@@ -1009,6 +1009,14 @@ export default {};
 .lnGffDGZ ._2ecxW5_b {
   opacity: 1;
 }
+._2yVHU0Wx {
+  /* padding-top: 48px; */
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  color: #2f4858;
+}
 @media (max-width: 767px) {
   ._2ecxW5_b {
     font-size: 20px;
@@ -1040,12 +1048,9 @@ export default {};
     padding-top: 48px;
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 44px;
     line-height: 36px;
-    /* identical to box height */
-
     text-align: center;
-
     color: #2f4858;
   }
 }

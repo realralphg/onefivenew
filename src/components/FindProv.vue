@@ -1,21 +1,21 @@
 <template>
   <div class="wrapper bg-dark">
-    <div class="grid container">
+    <div class="grid flexer container">
       <div class="img">
         <img src="/images/job-prov.png" alt="" />
       </div>
-      <div class="hold">
+      <div class="hold no_padding">
         <span class="span_text q-pa-md q-my-xl text-warning"
-          >For Job Seekers</span
+          >For Job Providers</span
         >
         <h2 class="text-h3 q-mb-md find_head text-white text-weight-bold">
-          Find Job and <br />
-          get it done
+          Find Professional <br />
+          Artisans your way
         </h2>
 
         <p class="q-pt-sm find_text q-pb-sm text-white">
-          Find jobs and clients around you and <br />
-          get the job done.
+          Work with the largest network of independent <br />
+          professionals and get your jobs done.
         </p>
 
         <q-btn
@@ -164,7 +164,7 @@ export default {
 }
 
 .img img {
-  width: 80%;
+  width: 60%;
 }
 
 @media (max-width: 1191px) {
@@ -226,8 +226,26 @@ export default {
     font-size: 1.5rem;
     color: #fff;
   }
-  .wrapper {
-    border-bottom-right-radius: 30%;
+
+  .img {
+    justify-content: center;
+  }
+
+  .flexer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .img img {
+    width: 100%;
+  }
+
+  .find_head {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 95%;
+    margin: 2rem 0;
+    color: #ffffff;
   }
 }
 

@@ -166,7 +166,7 @@ export default {
 }
 
 .img img {
-  width: 80%;
+  width: 70%;
 }
 
 @media (max-width: 1191px) {
@@ -228,8 +228,21 @@ export default {
     font-size: 1.5rem;
     color: #fff;
   }
-  .wrapper {
-    border-bottom-right-radius: 30%;
+  .img {
+    justify-content: center;
+  }
+
+  .find_head {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 95%;
+    margin: 2rem 0;
+    color: #ffffff;
+  }
+
+  .hold {
+    padding: 5rem 1rem;
   }
 }
 
