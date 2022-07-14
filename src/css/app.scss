@@ -1,5 +1,5 @@
 // app global css in SCSS form
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -23,37 +23,22 @@ li {
   text-transform: capitalize;
 }
 
-.splide__pagination li {
-  margin: 0 1rem !important;
-}
-
-.splide__pagination__page.is-active {
-  background: #5cff85 !important;
-  border-radius: 100px;
-  transform: scale(1.4);
-  width: 60px !important;
-  height: 6px;
-}
-.splide__pagination {
-  bottom: -2em !important;
-}
-.splide__pagination__page {
-  width: 16px !important;
-  height: 6px !important;
-
-  background: #ffffff;
-  border-radius: 5px !important;
-}
 img {
   width: 100%;
   object-fit: contain;
 }
-
-.no_padding {
-  padding: 0;
+input:focus {
+  outline: none;
 }
+
 .container {
   width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.containerr {
+  width: 95%;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -70,24 +55,183 @@ img {
   box-shadow: none;
 }
 
-.tabs .q-tab--active .q-tab__label {
-  background: none;
+.drawer {
+  padding: 1.2rem;
+  height: 100vh;
 }
 
-.tabs .q-tab__label {
-  padding: 0.75rem 1rem;
-  background: rgba(47, 72, 88, 0.09);
+.drawer .first .q-router-link--exact-active {
+  color: #1abc9c !important;
+  background: rgba(1, 221, 178, 0.06) !important;
+  border-radius: 6px !important;
+  border-left: 5px solid #1abc9c !important;
+}
+.drawer .first .q-router-link--exact-active i {
+  color: #1abc9c !important;
+}
+.drawer .first .q-router-link--exact-active p {
+  color: #1abc9c !important;
+}
+.drawer .first {
+  color: #1abc9c !important;
+  font-size: 1rem;
+}
+
+.btn_hold {
+  margin-bottom: 5rem;
+}
+
+.btn_hold .q-btn,
+.no_acc .q-btn {
+  padding: 4px 16px 0 0;
+  margin-left: 0.35rem;
+  font-size: 12px;
+}
+
+.dots {
+  font-size: 1.2rem;
+}
+.btn_hold .q-btn:before,
+.no_acc .q-btn:before,
+.dots::before {
+  box-shadow: none;
+}
+
+.step {
+  // display: flex;
+  width: 100%;
+  // justify-content: space-between;
+}
+
+.withdraw {
+  display: flex;
+  padding: 0.75rem;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_det {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1abc9c;
+  margin: 1rem 0;
+  position: relative;
+}
+.header_det::before {
+  position: absolute;
+  content: "";
+  background-color: #c4c4c4;
+  height: 2px;
+  width: 65%;
+  bottom: 0;
+  left: 35%;
+  margin-left: 2rem;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  align-items: center;
+  gap: 1rem;
+}
+
+.skill {
+  background: #eeeeee;
   border-radius: 100px;
-}
-.q-tab-panel {
-  padding: 0;
-}
-.tabs .scroll {
-  overflow: hidden;
+  padding: 0.65rem;
+  text-align: center;
+  font-size: 10px;
 }
 
+.pay_with {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.ussd {
+  border-bottom: 0.746914px solid #2f4858;
+  padding: 0.75rem;
+  color: #000000;
+  margin: 0.75rem 0;
+}
+
+.ussd::before {
+  box-shadow: none;
+}
+
+.sort_btn i,
+.logo i {
+  margin-right: 0.2rem;
+}
+
+.sort_btn::before,
+.more::before,
+.hire::before,
+.view::before {
+  box-shadow: none;
+}
+
+.back {
+  color: #1abc9c;
+  font-size: 0.7rem;
+  background: rgba(26, 188, 156, 0.2);
+  border-radius: 100px;
+  padding: 0.35rem;
+  width: 80px;
+}
+.back i {
+  font-size: 1rem;
+}
+
+.back::before {
+  box-shadow: none;
+}
+
+.withdraw::before {
+  box-shadow: none;
+}
+
+.edit_btn .btn {
+  background: #1abc9c;
+  border-radius: 100px;
+  padding: 0.65rem;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+.imgg {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.job_table .q-table tbody td {
+  height: 80px;
+}
+.profile_dropdown .q-btn__content {
+  width: 10px;
+}
+.profile_dropdown::before {
+  box-shadow: none;
+}
+
+.job_table thead {
+  background: #2f4858;
+  border-radius: 20px 20px 0px 0px;
+  color: #fff;
+}
 @media (max-width: 700px) {
   .no_padding {
     padding: 0 !important;
+  }
+  .pay_with {
+    width: 90%;
   }
 }

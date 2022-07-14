@@ -17,10 +17,12 @@
         <ul>
           <q-tabs>
             <q-route-tab
+              to="/login"
               class="text-primary q-mr-md login info"
               label="Log in"
             />
             <q-route-tab
+              to="/register"
               class="text-white sign_up q-px-lg q-py-sm"
               label="Sign Up"
             />
