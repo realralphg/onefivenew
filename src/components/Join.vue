@@ -1,5 +1,5 @@
 <template>
-  <div class="q-mt-xl wrapper bg-positive">
+  <div class="q-mt-xl wrapper bg-grey-11">
     <div class="join">
       <div class="text-center join_head">
         <span class="text-weight-bold">Join our community of ONE</span>FIVE

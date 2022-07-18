@@ -38,7 +38,7 @@
 
         <!-- <q-separator /> -->
 
-        <q-tab-panels class="bg-positive" v-model="tab" animated>
+        <q-tab-panels class="bg-grey-11" v-model="tab" animated>
           <q-tab-panel name="All">
             <div class="big_banner_jobs">
               <div
