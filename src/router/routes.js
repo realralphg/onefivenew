@@ -12,17 +12,16 @@ const routes = [
   // auth pages
 
   {
-    path: '/login',
+    path: '',
     component: () => import('layouts/authpages.vue'),
     children: [
       { path: '/login', component: () => import('pages/Authpages/Login.vue') }
     ],
-    children: [
-      { path: '/on', component: () => import('pages/Authpages/On.vue') }
-    ]
+    
+    
   },
   {
-    path: '/register',
+    path: '',
     component: () => import('layouts/authpages.vue'),
     children: [
       { path: '/register', component: () => import('pages/Authpages/Register.vue') }
@@ -32,7 +31,21 @@ const routes = [
     path: '',
     component: () => import('layouts/authpages.vue'),
     children: [
-      { path: '/onboard', component: () => import('pages/Onboard.vue') }
+      { path: '/confirmotp', component: () => import('pages/Authpages/Confirmotp.vue') }
+    ]
+  },
+  {
+    path: '',
+    component: () => import('layouts/authpages.vue'),
+    children: [
+      { path: '/success', component: () => import('pages/Successful.vue') }
+    ]
+  },
+  {
+    path: '',
+    component: () => import('layouts/onboard.vue'),
+    children: [
+      { path: '/on', component: () => import('pages/Authpages/On.vue') }
     ]
   },
 

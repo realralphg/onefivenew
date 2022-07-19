@@ -227,11 +227,74 @@ input:focus {
   border-radius: 20px 20px 0px 0px;
   color: #fff;
 }
+
+.onboard .q-stepper__dot {
+  contain: layout;
+  margin-right: 8px;
+  font-size: 14px;
+  width: 50px;
+  min-width: 24px;
+  height: 50px;
+  border-radius: 50%;
+  background: currentColor;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.on_hold .q-stepper {
+  box-shadow: none;
+  border-radius: 4px;
+  background: #fff;
+  height: 100%;
+}
+
+.on_hold .q-stepper__header--border {
+  border-bottom: none;
+}
+
+.otp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.otp .otp-input {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  margin: 0 10px;
+  font-size: 20px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+/* Background colour of an input field with value */
+.otp .otp-input.is-complete {
+  background-color: #e4e4e4;
+}
+.otp .otp-input::-webkit-inner-spin-button,
+.otp-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.otp input::placeholder {
+  font-size: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.onboard_nav .q-tab__label {
+  font-size: 1.2rem;
+}
 @media (max-width: 700px) {
   .no_padding {
     padding: 0 !important;
   }
   .pay_with {
     width: 90%;
+  }
+
+  .on_hold .q-stepper--horizontal .q-stepper__step-inner {
+    padding: 0;
   }
 }

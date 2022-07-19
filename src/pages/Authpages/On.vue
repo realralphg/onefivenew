@@ -1,6 +1,6 @@
 <template>
-  <div class="wrapper container">
-    <div class="q-pa-md">
+  <div class="wrapper onboard">
+    <div class="on_hold container">
       <q-stepper
         v-model="step"
         ref="stepper"
@@ -12,7 +12,7 @@
         <q-step :name="1" icon="settings" :done="step > 1">
           <div class="right">
             <div class="bio">
-              <div class="text-h6 text-weight-bold">
+              <div class="text-h5 text-weight-bold">
                 Hello!, Good to have you here
                 <span class="text-primary"> Zarror Mike</span>
               </div>
@@ -62,211 +62,135 @@
           icon="create_new_folder"
           :done="step > 2"
         >
-          <div class="text-h6">Tell us more about your Business.</div>
-          <small class="text-secondary"> All information will be kept </small>
-
-          <div>
-            Select your business type <br />
-            <small class="text-secondary">
-              ( You can select multiple options ) *</small
-            >
+          <div class="text-h5">
+            Great!
+            <span class="text-weight-bold text-primary">Zarror Mike</span>
           </div>
-          <div class="checks">
-            <div class="q-mt-lg">
-              <div
-                v-for="box in boxes"
-                :key="box.id"
-                class="hold q-my-sm row items-center"
-              >
-                <q-checkbox v-model="box.status" />
-                <p>{{ box.name }}</p>
+          <p class="text-black text-weight-medium">Which best describes you?</p>
+          <div class="hold">
+            <div class="inputs">
+              <div class="holdd">
+                <form
+                  enctype="multipart/form-data"
+                  id="form"
+                  @submit.prevent="saveUser"
+                >
+                  <div class="q-my-xl">
+                    <div class="input-wrap">
+                      <div class="check_wraps">
+                        <input
+                          type="radio"
+                          name="firstname"
+                          v-model="form.firstname"
+                        />
+
+                        <span> Just Statrting </span>
+                      </div>
+                      <div class="error" v-if="errors.firstname">
+                        {{ errors.firstname[0] }}
+                      </div>
+                    </div>
+                    <div class="input-wrap">
+                      <div class="check_wraps">
+                        <input
+                          type="radio"
+                          name="firstname"
+                          v-model="form.firstname"
+                        />
+
+                        <span> Intermediate </span>
+                      </div>
+                      <div class="error" v-if="errors.firstname">
+                        {{ errors.firstname[0] }}
+                      </div>
+                    </div>
+                    <div class="input-wrap">
+                      <div class="check_wraps">
+                        <input
+                          type="radio"
+                          name="firstname"
+                          v-model="form.firstname"
+                        />
+
+                        <span> Professional </span>
+                      </div>
+                      <div class="error" v-if="errors.firstname">
+                        {{ errors.firstname[0] }}
+                      </div>
+                    </div>
+                  </div>
+                </form>
               </div>
+
+              <div class="det"></div>
             </div>
           </div>
         </q-step>
 
         <q-step prefix="3" :name="3" icon="add_comment">
-          <div class="step_wrap">
-            <div class="text-h6">Set up your Business.</div>
-            <small class="text-secondary">
-              Upload your business documents to complete registration.
-            </small>
-
-            <div class="input_holds q-mt-lg">
-              <div class="text-subtitle text-weight-medium">
-                Tax Identification
-              </div>
-              <div class="" v-if="!file">
-                <div
-                  :class="['dropZone', dragging ? 'dropZone-over' : '']"
-                  @dragenter="dragging = true"
-                  @dragleave="dragging = false"
+          <div class="text-h5">
+            Awesome!
+            <span class="text-weight-bold text-primary">Zarror Mike</span>
+          </div>
+          <p class="text-black text-weight-medium">
+            How many years of experience?
+          </p>
+          <div class="hold">
+            <div class="inputs">
+              <div class="holdd">
+                <form
+                  enctype="multipart/form-data"
+                  id="form"
+                  @submit.prevent="saveUser"
                 >
-                  <div class="dropZone-info" @drag="onChange">
-                    <span
-                      style="font-size: 2rem; color: #fe724c"
-                      class="fa fa-cloud-upload dropZone-title"
-                    ></span>
+                  <div class="q-my-xl">
+                    <div class="input-wrap">
+                      <div class="check_wraps">
+                        <input
+                          type="radio"
+                          name="firstname"
+                          v-model="form.firstname"
+                        />
 
-                    <span class="dropZone-title">Upload File</span>
-                    <!-- <span class="dropZone-title"
-                    >Drop file or click to upload</span
-                  > -->
-                    <div class="dropZone-upload-limit-info">
-                      <div class="text-secondary">
-                        Document should be in PDF format
+                        <span> 0 - 5 years</span>
                       </div>
+                      <div class="error" v-if="errors.firstname">
+                        {{ errors.firstname[0] }}
+                      </div>
+                    </div>
+                    <div class="input-wrap">
+                      <div class="check_wraps">
+                        <input
+                          type="radio"
+                          name="firstname"
+                          v-model="form.firstname"
+                        />
 
-                      <!-- <div>extension support: txt</div>
-                    <div>maximum file size: 5 MB</div> -->
+                        <span> 5 - 10 years </span>
+                      </div>
+                      <div class="error" v-if="errors.firstname">
+                        {{ errors.firstname[0] }}
+                      </div>
+                    </div>
+                    <div class="input-wrap">
+                      <div class="check_wraps">
+                        <input
+                          type="radio"
+                          name="firstname"
+                          v-model="form.firstname"
+                        />
+
+                        <span> 10 - 20 years </span>
+                      </div>
+                      <div class="error" v-if="errors.firstname">
+                        {{ errors.firstname[0] }}
+                      </div>
                     </div>
                   </div>
-                  <input class="file_up file" type="file" @change="onChange" />
-                </div>
+                </form>
               </div>
-              <div v-else class="dropZone-uploaded">
-                <div class="dropZone-uploaded-info">
-                  <div>fileName: {{ file.name }}</div>
 
-                  <span class="dropZone-title">Uploaded</span>
-                  <button
-                    type="button"
-                    class="btn btn-primary removeFile"
-                    @click="removeFile"
-                  >
-                    Remove File
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="input_holds q-mt-lg">
-            <div class="text-subtitle text-weight-medium">
-              Certificate of Incorporation
-            </div>
-            <div class="" v-if="!certificateFile">
-              <div
-                :class="['dropZone', dragging ? 'dropZone-over' : '']"
-                @dragenter="dragging = true"
-                @dragleave="dragging = false"
-              >
-                <div class="dropZone-info" @drag="onChange">
-                  <span
-                    style="font-size: 2rem; color: #fe724c"
-                    class="fa fa-cloud-upload dropZone-title"
-                  ></span>
-                  <span class="dropZone-title">Upload File</span>
-                  <div class="dropZone-upload-limit-info">
-                    <div class="text-secondary">
-                      Document should be in PDF format
-                    </div>
-                  </div>
-                </div>
-                <input
-                  class="file_up certificateFile"
-                  type="file"
-                  @change="onChange"
-                />
-              </div>
-            </div>
-            <div v-else class="dropZone-uploaded">
-              <div class="dropZone-uploaded-info">
-                <div>fileName: {{ certificateFile.name }}</div>
-
-                <span class="dropZone-title">Uploaded</span>
-                <button
-                  type="button"
-                  class="btn btn-primary removeFile"
-                  @click="removeFile"
-                >
-                  Remove File
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="input_holds q-mt-lg">
-            <div class="text-subtitle text-weight-medium">
-              ID card of Business owner
-            </div>
-            <div class="" v-if="!idFile">
-              <div
-                :class="['dropZone', dragging ? 'dropZone-over' : '']"
-                @dragenter="dragging = true"
-                @dragleave="dragging = false"
-              >
-                <div class="dropZone-info" @drag="onChange">
-                  <span
-                    style="font-size: 2rem; color: #fe724c"
-                    class="fa fa-cloud-upload dropZone-title"
-                  ></span>
-                  <span class="dropZone-title">Upload File</span>
-                  <div class="dropZone-upload-limit-info">
-                    <div class="text-secondary">
-                      Document should be in PDF format
-                    </div>
-                  </div>
-                </div>
-                <input class="file_up idFile" type="file" @change="onChange" />
-              </div>
-            </div>
-            <div v-else class="dropZone-uploaded">
-              <div class="dropZone-uploaded-info">
-                <div>fileName: {{ idFile.name }}</div>
-
-                <span class="dropZone-title">Uploaded</span>
-                <button
-                  type="button"
-                  class="btn btn-primary removeFile"
-                  @click="removeFile"
-                >
-                  Remove File
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="input_holds q-mt-lg">
-            <div class="text-subtitle text-weight-medium">
-              Submit your Food menu or list of products
-            </div>
-            <div class="" v-if="!menuFile">
-              <div
-                :class="['dropZone', dragging ? 'dropZone-over' : '']"
-                @dragenter="dragging = true"
-                @dragleave="dragging = false"
-              >
-                <div class="dropZone-info" @drag="onChange">
-                  <span
-                    style="font-size: 2rem; color: #fe724c"
-                    class="fa fa-cloud-upload dropZone-title"
-                  ></span>
-                  <span class="dropZone-title">Upload File</span>
-                  <div class="dropZone-upload-limit-info">
-                    <div class="text-secondary">
-                      Document should be in PDF format
-                    </div>
-                  </div>
-                </div>
-                <input
-                  class="file_up menuFile"
-                  type="file"
-                  @change="onChange"
-                />
-              </div>
-            </div>
-            <div v-else class="dropZone-uploaded">
-              <div class="dropZone-uploaded-info">
-                <div>fileName: {{ menuFile.name }}</div>
-
-                <span class="dropZone-title">Uploaded</span>
-                <button
-                  type="button"
-                  class="btn btn-primary removeFile"
-                  @click="removeFile"
-                >
-                  Remove File
-                </button>
-              </div>
+              <div class="det"></div>
             </div>
           </div>
         </q-step>
@@ -290,18 +214,22 @@
         </template>
       </q-stepper>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import { ref } from "vue";
-
+import Footer from "../../components/Footer.vue";
 export default {
   setup() {
     return {
       step: ref(1),
       val: ref(true),
     };
+  },
+  components: {
+    Footer,
   },
   data() {
     return {
@@ -387,7 +315,16 @@ p {
 }
 
 .wrapper {
-  padding: 3rem 0;
+  padding: 3rem 0 0;
+  height: 100%;
+  background: #fff;
+}
+
+.on_hold {
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  height: 100%;
 }
 
 .error {
@@ -479,6 +416,21 @@ select:focus {
   border-radius: 100px;
 }
 
+.check_wraps {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  background: #ffffff;
+  border: 1px solid rgba(151, 151, 151, 0.3);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.check_wraps span {
+  color: #666666;
+}
+
 /* dropzone */
 
 .dropZone {
@@ -559,7 +511,7 @@ select:focus {
 .removeFile {
   width: 200px;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .log .wrapp p {
     font-size: 11px;
   }
@@ -577,6 +529,12 @@ select:focus {
 
   .input-wrap .input {
     font-size: 13.5px;
+  }
+  .on_hold {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    height: 100%;
   }
 }
 
@@ -619,6 +577,12 @@ select:focus {
     padding: 1rem;
     border-radius: 8px;
     font-size: 12px;
+  }
+  .on_hold {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    height: 100%;
   }
 }
 </style>

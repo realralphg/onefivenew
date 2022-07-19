@@ -8,7 +8,7 @@
         <p>Where creators run their business, and where you get job done.</p>
       </div>
 
-      <div class="box">
+      <div class="box text-center">
         <h6 class="text-weight-bold text-primary">Services</h6>
         <ul>
           <li>About Us</li>
@@ -17,9 +17,9 @@
         </ul>
       </div>
 
-      <div class="box">
+      <div class="box text-center">
         <h6 class="text-weight-bold text-primary">Social Media</h6>
-        <div class="icons row items-center">
+        <div class="icons text-center justify-center row items-center">
           <i class="ri-facebook-circle-fill"></i>
           <i class="ri-twitter-fill q-ml-sm"></i>
           <i class="ri-linkedin-fill q-ml-sm"></i>
@@ -31,7 +31,7 @@
         <h6 class="text-weight-bold text-primary">Newsletter</h6>
         <p class="q-my-sm">Stay informed on our latest news!</p>
 
-        <div class="input__wrap">
+        <div class="input__wrap q-pr-md">
           <div class="input">
             <div class="left">
               <input placeholder="Enter your email" type="text" />
@@ -45,7 +45,7 @@
         <div class="details">
           <p class="det_head">Download ONEFIVE App</p>
 
-          <div class="two">
+          <div class="download_btns items-center">
             <div class="download">
               <i class="ri-google-play-line"></i>
               <div class="det q-ml-sm">
@@ -65,7 +65,7 @@
       </div>
     </div>
 
-    <div class="fle text-white q-pt-xl container">
+    <div class="fle q-py-md text-white q-pt-xl container">
       <p>© 2022 Greysoft Technologies.</p>
       <div class="li">
         <ul>
@@ -90,6 +90,7 @@ P {
   padding: 3rem 0 1rem;
   position: relative;
   overflow: hidden;
+  bottom: 0;
 }
 
 .grid {
@@ -136,6 +137,7 @@ P {
   /* font-weight: 800; */
   font-size: 41.4334px;
   line-height: 62px;
+  text-overflow: ellipsis;
 
   color: #1abc9c;
 }
@@ -168,12 +170,12 @@ P {
   border: 1px solid #fff;
   margin: 0 auto;
   border-radius: 4px;
-  height: 57px;
+  height: 40px;
   margin-top: 2rem;
   color: #fff;
   background: #ffffff;
   border-radius: 4px;
-  padding: 0.75rem 0 0.75rem 0.75rem;
+  padding: 0.35rem 0 0.35rem 0.35rem;
 }
 
 .input .left {
@@ -191,9 +193,11 @@ P {
 }
 
 .input .search {
-  height: 57px;
+  height: 40px;
   border-radius: 4px;
-  width: 105px;
+  width: 70px;
+  padding: 0.25rem;
+  font-size: 12px;
 }
 
 .two {
@@ -215,6 +219,12 @@ P {
   line-height: 28px;
   font-feature-settings: "salt" on, "liga" off;
   color: #d9dbe1;
+}
+
+.download_btns {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
 }
 
 .download {
@@ -254,7 +264,9 @@ P {
   bottom: 3%;
   right: 18%;
 }
-
+::placeholder {
+  font-size: 14px;
+}
 @media (max-width: 768px) {
   .hide {
     display: block;
@@ -286,7 +298,7 @@ P {
 
   .download {
     padding: 0.15rem 0.4rem;
-    /* height: 50px; */
+
     overflow: hidden;
     width: 75%;
   }
@@ -316,6 +328,11 @@ P {
   }
   .input {
     height: 45px;
+  }
+}
+@media (max-width: 500px) {
+  .download_btns {
+    flex-wrap: wrap;
   }
 }
 </style>
