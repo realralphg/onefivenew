@@ -96,7 +96,7 @@ P {
 .grid {
   display: grid;
   /* grid-template-columns: repeat(4, 1fr); */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
 
@@ -223,8 +223,9 @@ P {
 
 .download_btns {
   display: flex;
-  gap: 1.5rem;
+  /* gap: 1.5rem; */
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .download {

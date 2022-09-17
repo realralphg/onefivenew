@@ -1048,7 +1048,7 @@ export default {};
     padding-top: 48px;
     font-style: normal;
     font-weight: 700;
-    font-size: 44px;
+    font-size: 30px;
     line-height: 36px;
     text-align: center;
     color: #2f4858;

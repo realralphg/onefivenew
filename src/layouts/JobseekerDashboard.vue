@@ -103,7 +103,7 @@
                 exact
                 clickable
                 v-ripple
-                :to="{ name: 'dashboard' }"
+                :to="{ name: 'seekerDashboard' }"
               >
                 <div class="wrapp">
                   <i class="ri-dashboard-fill text-positive"></i>

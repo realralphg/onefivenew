@@ -69,7 +69,7 @@ export default {
 .find_head {
   font-style: normal;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 40px;
   line-height: 88%;
   margin: 4rem 0;
   color: #ffffff;
@@ -165,9 +165,9 @@ export default {
   justify-content: flex-end;
 }
 
-.img img {
+/* .img img {
   width: 70%;
-}
+} */
 
 @media (max-width: 1191px) {
   .cur {

@@ -292,6 +292,13 @@ p {
   border-radius: 50%;
 }
 
+@media (max-width: 821px) {
+  .img {
+    position: relative;
+    margin: 2rem auto 0;
+    width: 60%;
+  }
+}
 @media (max-width: 800px) {
   .trans_det {
     width: 80%;

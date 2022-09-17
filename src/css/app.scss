@@ -51,6 +51,11 @@ input:focus {
   line-height: 27px;
   color: #2f4858;
 }
+
+.nav .q-tab {
+  padding: 0 8px;
+}
+
 .hero_btn:before {
   box-shadow: none;
 }
@@ -286,6 +291,7 @@ input:focus {
 .onboard_nav .q-tab__label {
   font-size: 1.2rem;
 }
+
 @media (max-width: 700px) {
   .no_padding {
     padding: 0 !important;

@@ -19,8 +19,8 @@
           indicator-color="accent"
           align="justify"
           narrow-indicator
-          mobile-arrows="true"
-          outside-arrows="true"
+          mobile-arrows
+          outside-arrows
         >
           <q-tab class="text-dark" name="All" label="All" />
           <q-tab class="text-dark" name="Plumbing" label="Plumbing" />
@@ -234,7 +234,7 @@ export default {
 
 .big_banner_jobs {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   /* grid-template-columns: repeat(3, 1fr); */
   margin: 3rem 0;
   gap: 1rem;

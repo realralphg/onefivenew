@@ -1,10 +1,10 @@
 
 const routes = [
   {
-    path: '',
+    path: '/homepage',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '/home', component: () => import('pages/IndexPage.vue') }
+      { path: '/', component: () => import('pages/IndexPage.vue') }
     ]
   },
 
@@ -12,37 +12,27 @@ const routes = [
   // auth pages
 
   {
-    path: '',
+    path: '/auth',
     component: () => import('layouts/authpages.vue'),
     children: [
-      { path: '/login', component: () => import('pages/Authpages/Login.vue') }
+      { path: '/login', component: () => import('pages/Authpages/Login.vue') },
+      { path: '/register', component: () => import('pages/Authpages/Register.vue') },
+      { path: '/confirmotp', component: () => import('pages/Authpages/Confirmotp.vue') }
     ],
     
     
   },
+  
+  
   {
-    path: '',
-    component: () => import('layouts/authpages.vue'),
-    children: [
-      { path: '/register', component: () => import('pages/Authpages/Register.vue') }
-    ]
-  },
-  {
-    path: '',
-    component: () => import('layouts/authpages.vue'),
-    children: [
-      { path: '/confirmotp', component: () => import('pages/Authpages/Confirmotp.vue') }
-    ]
-  },
-  {
-    path: '',
+    path: '/success',
     component: () => import('layouts/authpages.vue'),
     children: [
       { path: '/success', component: () => import('pages/Successful.vue') }
     ]
   },
   {
-    path: '',
+    path: '/onboard',
     component: () => import('layouts/onboard.vue'),
     children: [
       { path: '/on', component: () => import('pages/Authpages/On.vue') }
@@ -52,7 +42,7 @@ const routes = [
   // job seeker dashboard
 
   {
-    path: '',
+    path: '/jobCreator',
     component: () => import('layouts/JobseekerDashboard.vue'),
     children: [
       { path: '/seekerDashboard', component: () => import('pages/jobseeker/Jobseeker.vue'), name:'seekerDashboard' },
@@ -69,7 +59,7 @@ const routes = [
   // job creator dashboard
 
   {
-    path: '',
+    path: '/creatorDashboard',
     component: () => import('layouts/JobcreatorDashboard.vue'),
     children: [
       { path: '/createJob', component: () => import('pages/jobcreator/Createjob.vue'), name:'createJob' },

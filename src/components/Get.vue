@@ -62,7 +62,7 @@ p {
 .find_head {
   font-style: normal;
   font-weight: 800;
-  font-size: 48px;
+  font-size: 40px;
   line-height: 64px;
   /* or 133% */
 
@@ -119,8 +119,9 @@ p {
 }
 
 .two {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  /* grid-template-columns: repeat(2, 1fr); */
+  flex-wrap: wrap;
   gap: 1rem;
   width: 100%;
 }

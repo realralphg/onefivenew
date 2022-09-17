@@ -151,6 +151,12 @@ export default defineComponent({
   width: 140px;
   background: #1abc9c;
 }
+@media (max-width: 821px) {
+  .sign_up,
+  .login {
+    width: 100px;
+  }
+}
 
 @media (max-width: 768px) {
   .hide {

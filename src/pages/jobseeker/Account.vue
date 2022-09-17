@@ -161,14 +161,6 @@ export default {
   data() {
     return {
       inputErr: "",
-      form: {
-        email: this.userData("email"),
-        gender: this.userData("gender"),
-
-        name: this.userData("name"),
-
-        phone: this.userData("phone"),
-      },
     };
   },
   methods: {
